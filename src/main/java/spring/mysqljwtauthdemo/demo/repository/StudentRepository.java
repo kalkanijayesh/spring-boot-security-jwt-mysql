@@ -1,5 +1,6 @@
 package spring.mysqljwtauthdemo.demo.repository;
 
+import java.lang.StackWalker.Option;
 import java.util.List;
 import java.util.Optional;
 
@@ -12,5 +13,6 @@ import spring.mysqljwtauthdemo.demo.model.Student;
 public interface StudentRepository extends JpaRepository<Student, Long> {
 
     Optional<Student> findStudentById(Long id);
+    Optional<Student> findByEmail(String email);
 
 }
